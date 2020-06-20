@@ -34,7 +34,8 @@ const GetDataByCountry = async()=>{
 	   recovered.innerText =  data.statewise[0].recovered; 
 	   for(let i=1;i<len;i++)
 	   {
-               
+                   if(i==10)
+		   continue;
 		   
 		   let state = data.statewise[i].state;
 		   let confirmed = data.statewise[i].confirmed;
