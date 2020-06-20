@@ -35,14 +35,16 @@ const GetDataByCountry = async()=>{
 	   for(let i=1;i<len;i++)
 	   {
                   
-		   
+		   if(i===10)
+		   {
+		   continue;
+		   }
 		   let state = data.statewise[i].state;
 		   let confirmed = data.statewise[i].confirmed;
 		   let active = data.statewise[i].active;
 		   let recovered = data.statewise[i].recovered;
 		   let deaths = data.statewise[i].deaths;
-		    if(i==10)
-		   continue;
+		    
 		let html = `
 					<section class="facts section-bg " data-aos="fade-up">
 					<div class="container">
