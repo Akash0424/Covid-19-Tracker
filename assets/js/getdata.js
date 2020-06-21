@@ -30,10 +30,10 @@ const GetDataByCountry = async()=>{
 	   const last= data[len-1];
 	   arr = data.statewise;
 
-	   totalcon.innerText = data.statewise[0].confirmed;
-	   active.innerText = data.statewise[0].active; 
-	   death.innerText = data.statewise[0].deaths; 
-	   recovered.innerText =  data.statewise[0].recovered; 
+	   totalcon.innerText = numberWithCommas(data.statewise[0].confirmed);
+	   active.innerText = numberWithCommas(data.statewise[0].active); 
+	   death.innerText = numberWithCommas(data.statewise[0].deaths); 
+	   recovered.innerText =  numberWithCommas(data.statewise[0].recovered); 
 	   for(let i=1;i<len;i++)
 	   {
                   
