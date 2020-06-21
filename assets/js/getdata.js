@@ -14,7 +14,9 @@ const GenerateDate = ()=>{
 	return date;
 }
 
-
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 const GetDataByCountry = async()=>{
   
@@ -40,10 +42,10 @@ const GetDataByCountry = async()=>{
 		   continue;
 		   }
 		   let state = data.statewise[i].state;
-		   let confirmed = data.statewise[i].confirmed;
-		   let active = data.statewise[i].active;
-		   let recovered = data.statewise[i].recovered;
-		   let deaths = data.statewise[i].deaths;
+		   let confirmed = numberWithCommas(data.statewise[i].confirmed);
+		   let active = numberWithCommas(data.statewise[i].active);
+		   let recovered = numberWithCommas(data.statewise[i].recovered);
+		   let deaths = numberWithCommas(data.statewise[i].deaths);
 		    
 		let html = `
 					<section class="facts section-bg " data-aos="fade-up">
